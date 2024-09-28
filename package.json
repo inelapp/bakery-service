@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "workspaces": [
+    "commons",
+    "bakeryapi"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "start": "cd ./bakeryapi && npm start",
+    "heroku-prebuild": "echo 'Pre-build step here'",
+    "heroku-postbuild": "yarn workspaces run build"
+  },
+  "engines": {
+    "node": ">=16.x"
+  }
+}
